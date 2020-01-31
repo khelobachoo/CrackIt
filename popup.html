@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      input[type=text], select {
+        width: 100%;
+        padding: 5px 5px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      button {
+        color:"black";
+        width: 100%;
+        background-color: #f2f2f2;
+        padding: 5px 5px;
+        margin: 2px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #f2f2f2;
+      }
+      
+      .form {
+        border-radius: 5px;
+        padding: 5px;
+        width: 100px;
+        align-items: "center"
+      }
+      .images{
+        border-radius: 5px;
+        padding: 5px;
+        align-items: "center"
+      }
+    </style>
+  </head>
+  <body>
+      <form >
+
+          <label for="country"><b>Select PDF</b></label>
+          <select id="branch" name="branch" aria-placeholder="Branch" >
+  
+            <option value="PDF1">PDF1</option>
+            <option value="PDF2">PDF2</option>
+            <option value="PDF3">PDF3</option>
+            <option value="PDF4">PDF4</option>
+            <option value="PDF5">PDF5</option>
+          </select>
+        
+          <!-- <button id="open_pdf">Open PDF</button> -->
+        </form>
+
+
+    <iframe id="pdf_iframe" height="300px" width="400px" src="/web/viewer.html?file=PDF/BCB.pdf"></iframe>
+        <!-- <iframe src="https:www.google.com"></iframe> -->
+  </body>
+  <script src="popup.js"></script>
+
+</html>

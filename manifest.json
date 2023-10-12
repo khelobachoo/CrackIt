@@ -3,12 +3,12 @@
   "version": "3.2",
   "description": "Cracking comprehensive exam",
   "permissions": ["declarativeContent","storage"],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "browser_action": {
+  "background": { "service_worker": "background.js" },
+  "action": {
     "default_popup": "popup.html"
+  }, 
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://music.yandex.ru/;"
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",  "manifest_version": 2
+  "manifest_version": 3
 }
